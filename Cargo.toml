@@ -1,5 +1,2 @@
 [workspace]
-members = [
-    "crates/oxy_wasm",
-    "crates/data_prep"
-]
+members = ["crates/oxy_wasm", "crates/data_prep"]
