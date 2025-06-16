@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OxyMap</title>
+    <script src="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="map" style="width: 100vw; height: 100vh;"></div>
+    
+    <script type="module">
+        import { initMap } from './src/js/mapEngine.js';
+        import { setupMapControls } from './src/js/uiController.js';
+        import { run } from './src/wasm/loader.js';
+        
+        // Initialize map after Wasm loads
+        run().then(() => {
+            const map = initMap('map', 'https://demotiles.maplibre.org/style.json');
+            setupMapControls(map);
+        });
+    </script>
+</body>
+</html>

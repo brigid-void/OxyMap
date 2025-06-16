@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=/home/lichen/CascadeProjects/OxyMap/target/wasm32-unknown-unknown/release/build/mime_guess-b64c11034a7fe8cc/out/mime_types_generated.rs
